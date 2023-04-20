@@ -3,90 +3,11 @@
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans" rel="stylesheet">
+        <link rel ="stylesheet" href="mystylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans" >
+        
         <title>Home Page</title>
-        <style>
-            body {
-                background-color: white;
-            }
-            h1 {
-                color: white;
-                text-align: center;
-                font-family: "IBM Plex Sans", sans-serif, "helvetica";
-                font-size: 60px;
-            }
-
-            h2 {
-                color: white;
-                text-align: center;
-                font-family: "IBM Plex Sans", sans-serif, "helvetica";
-            }
-
-            .img {
-                width: 600px;
-                height: 600px;
-                object-fit: cover;
-            }
-            .header {
-                background-color: #8A9A5B;
-                text-align: center;
-                padding: 15px;
-            }
-            .navbar {
-                padding:20px;
-                background-color: pink;
-
-            }
-            .navbarli {
-                display: block;
-                padding: 30px;
-                font-size: 20px;
-                font-family: "IBM Plex Sans", sans-serif, "helvetica";
-            }
-
-            .body {
-                background-color: #77854f;
-                text-align: center;
-            }
-
-            .monbut {
-                background-color: #8A9A5B;
-                color: white;
-                text-align: center;
-                font-size: 40px;
-                font-family: "IBM Plex Sans", sans-serif, "helvetica";
-                padding: 14px 40px;
-                border: 2px solid white;
-                user-select: none;
-            }
-
-            .monbut:hover {
-                background-color: #77854f;
-            }
-
-            .space {
-                padding: 50px;
-            }
-
-            .jumpscare {
-                animation-duration: 0.5s;
-                animation-name: jumpscare;
-                animation-direction: alternate;
-            }
-
-            @keyframes jumpscare {
-                from {
-                    width: 600px;
-                    height: 600px;
-                }
-
-                to {
-                    width: 900px;
-                    height: 900px;
-                }
-
-            }
-        </style>
+       
     </head>
 
     <body>
@@ -104,27 +25,7 @@
             </div>
         </div>
 
-        <script>
-            var audio = new Audio("jumpscare.mp3");
-
-            function randomise(max) {
-                var num = Math.floor(Math.random() * max);
-                if (num != 6) {                
-                    document.getElementById("monkey").src = num + ".jpg";
-                    if (document.getElementById("monkey").classList.contains("jumpscare")) {
-                        document.getElementById("monkey").classList.remove("jumpscare");
-                    }
-                    
-                } else {
-                    document.getElementById("monkey").src = num + ".jpg";
-                    document.getElementById("monkey").classList.add("jumpscare");
-                    audio.play();
-                }
-            }
-
-            
-            
-        </script>
+        <script src="javascript.js"></script>
 
     </body>
 </html>
